@@ -1,0 +1,319 @@
+
+
+/* Expletus font */
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
+
+html,body {
+  height: 90%;
+  width: 100%;
+  scroll-behavior: smooth; /* Makes the back to top button better */
+}
+
+#btn-top {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #3369E8;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.btn-primary {
+	border-color: black;
+	color: grey;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper h1 {
+  display: flex;
+  justify-content: center;
+  font-family: 'Expletus Sans';
+  font-size: 50px;
+  letter-spacing: 10px;
+}
+
+header h1{
+  font-family: 'Expletus Sans';
+  letter-spacing: 5px;
+  margin: 5px;
+}
+
+.logo:hover{
+  text-decoration: none;
+}
+
+
+.logo:focus{
+  text-decoration: none;
+}
+
+input {
+  width: 500px;
+  height: 30px;
+}
+
+.search_buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  height: 90px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2.5px solid black;
+}
+
+input#after_search{
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  padding-left: 7px;
+  height: 35px;
+  font-size:20px;
+  border-radius: 4px;
+  border:1px solid black;
+  color: rgb(56, 56, 56);
+}
+
+
+
+section{
+	padding-left: 160px;
+	padding-top: 30px;
+}
+
+.wiki_title{
+  font-size: 1.5em;
+}
+
+.wiki_title a{
+  color:#1717de;
+}
+
+
+.wiki_snippet{
+  width:500px;
+  padding-bottom: 15px;
+}
+
+.search_buttons button {
+  width: 100px;
+}
+.search_buttons {
+  margin-top: 5px;
+}
+
+.search_buttons button {
+  background-color: #f3f3f3;
+}
+.search_buttons button:hover {
+  color: #fafafa;
+  background-color: #444444;
+
+}
+
+.after_search_container{
+  display: flex;
+  align-items: center;
+}
+
+.after_search_container span{
+  display: flex;
+  height: 35px;
+  font-size: 20px;
+  align-items: center;
+  width: 35px;
+  background-color:#3369E8;
+  margin-left: -15px;
+  color: white;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor:pointer;
+}
+
+.after_search_container span i{
+  margin-left: 6px;
+}
+
+
+/*Media Query*/
+
+@media (min-width:521px) and (max-width:720px) {
+  input#after_search {
+	width: 300px;
+  }
+
+  input#before_search{
+	width: 400px;
+  }
+
+  section{
+	padding-left: 35px;
+  }
+}
+
+@media only screen and (max-width:520px)  {
+  input#before_search{
+	width: 300px;
+  }
+
+  input#after_search{
+	width: 250px;
+  }
+
+  section{
+	padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width:470px)  {
+  input#before_search{
+	width: 300px;
+  }
+
+  input#after_search{
+	width: 160px;
+  }
+
+  section{
+	padding-left: 20px;
+  }
+}
+
+#before_search {
+  border-radius: 4px;
+  border:1px solid black;
+  color: rgb(56, 56, 56);
+  margin-top: 15px;
+}
+#before_search:hover {
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px lightgrey, 0 0 5px lightgrey, 0 0 5px lightgrey;
+}
+nav {
+  position: sticky;
+}
+#specs {
+  opacity: 75%;
+}
+.loader {
+  text-align: center;
+  border: 8px solid #e8e8e8;
+  border-radius: 50%;
+  border-top: 8px solid #757575;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  50% { -webkit-transform: rotate(180deg); }
+  100% { -webkit-transform: rotate(180deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+#before_search:focus {
+  border-radius: 5px;
+  outline: none;
+}
+#before_search:hover {
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px;
+}
+.globe {
+  margin-left: 47%;
+  font-size: 30px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.wiki_wordcount {
+  opacity: 80%;
+}
+.fa-volume-high {
+  font-size: 10px;
+  display: inline-block;
+}
+#gradientText {
+  background: linear-gradient(to right, #12c2e9,
+   			 #c471ed, #f64f59);
+   		 -webkit-text-fill-color: transparent;
+  	background-clip: text;
+   		 -webkit-background-clip: text;
+}
+#random {
+  transition: 0.5s;
+}
+#random:hover {
+  background: linear-gradient(to right, #12c2e9,
+   			 #c471ed, #f64f59);
+}
+#after_search:focus {
+  border-radius: 5px;
+  outline: none;
+}
+#after_search:hover {
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px;
+}
