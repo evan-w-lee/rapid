@@ -1,1 +1,82 @@
 
+<html>
+<lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.png"/>
+  <title>Rapid</title>
+
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="styles.css">
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src="https://kit.fontawesome.com/d3ef72d2f9.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script src="btn.js"></script>
+</head>
+<body>
+
+  <!-- After the search-->
+
+  <div class="hidden" id="searched_results_display">
+	<header>
+  	<!-- Name -->
+  	<nav>
+    	<a href="file:///Users/evan/Desktop/Files/Code/Web/Rapid/rapid.html" class="logo" >
+      	<h1 style="width: 150px; margin-left: 10px; margin-top: -10px;" id="gradientText">
+        	RAP1D
+      	</h1>
+    	</a>
+    	<div class="after_search_container">
+      	<!-- After search box-->
+      	<form method="GET">
+        	<input type="text" id="after_search" onchange="changeTitle()">
+      	</form>
+    	</div>
+    	<div class="globe">
+      	<div class="tooltip">hi
+        	<span class="tooltiptext">Tooltip text</span>
+      	</div>
+    	</div>
+  	</nav>
+	</header>
+	<section id="specs"></section> <!-- Specifications -->
+	<section class="wiki_results"><div class="loader"></div></section> <!-- Search results-->
+	<!-- Go to top button -->
+	<button onclick="topFunction()" id="btn-top" title="Go to top">
+  	<i class="fa fa-arrow-up"></i>
+	</button>
+  </div>
+
+
+  <!-- Before the search -->
+
+
+  <div class="wrapper">
+	<div class="search_body">
+  	<!-- Name -->
+  	<h1 id="gradientText">
+    	RAP1D
+  	</h1>
+  	<form method="GET" >
+    	<div>
+        	<input type="search" maxlength="30" id="before_search" name="search" autofocus>
+    	</div>
+    	<!-- Search Buttons-->
+    	<div class="search_buttons">
+      	<button type="submit" class="btn btn-primary" id="search">
+        	Search
+      	</button>
+      	<button id="random" onclick="randomSearch()" class="btn btn-primary">
+        	Random
+      	</button>
+    	</div>
+  	</form>
+	</div>
+  </div> 
+</body>
+</html>
+<!-- Stuff to make the CSS look nice-->
+<div class="wiki_title"><a><div class="wiki_snippet"></div></a></div>
+
